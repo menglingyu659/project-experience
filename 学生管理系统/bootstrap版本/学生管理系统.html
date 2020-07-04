@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>练习2</title>
+    <link rel="stylesheet" href="../../计算机课程/bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <style>
+        .container-fluid {
+            line-height: 100px;
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        .logo img {
+            margin-right: 10px;
+            width: 50px;
+        }
+
+        .logo span {
+            font-size: 20px;
+            vertical-align: middle;
+            color: #000;
+            font-weight: bold;
+        }
+
+        nav {
+            position: relative;
+        }
+
+
+        nav .navbar-form {
+            font-size: 16px;
+            line-height: 100px;
+            margin-top: 0;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            border: none;
+        }
+
+        nav .navbar-form input {
+            height: 30px;
+            width: 300px;
+            outline: none;
+            padding: 0 5px;
+            border-radius: 10px;
+        }
+
+        .nav.navbar-nav {
+            text-align: center;
+            display: none;
+
+        }
+
+
+        @media all and (max-width: 768px) {
+
+            .nav.navbar-nav {
+                display: block;
+            }
+
+            nav .navbar-form input {
+                width: 200px;
+            }
+
+            nav .navbar-form {
+                font-size: 14px;
+                padding: 0;
+                right: 90px;
+            }
+
+            .form-group {
+                display: inline-block;
+            }
+
+            .navbar-default .navbar-form {
+                display: inline-block;
+            }
+        }
+
+        .wrapper header {
+            background-image: linear-gradient(#333, #555, #aaa)
+        }
+
+        .navbar {
+            margin-bottom: 0px;
+        }
+
+        .navbar-default {
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        .navbar-default .navbar-nav>li>a {
+            color: #000;
+        }
+
+        .form-group span {
+            color: #000;
+        }
+
+        aside {
+            display: inline-block;
+            width: 200px;
+            background-image: linear-gradient(#333, #555, #aaa);
+            height: calc(100vh - 104px);
+        }
+
+        .wrapper {
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .wrapper article {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100vw;
+            height: 100vh;
+            padding: 105px 0 0 200px;
+        }
+
+        .wrap {
+            padding: 30px;
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-30%);
+            width: 500px;
+            height: 500px;
+            border: 1px solid;
+        }
+
+        .form-group input:not([type="radio"]) {
+            width: 300px;
+        }
+
+        .wrap {
+            display: none;
+        }
+
+        .wrap1 {
+            padding: 30px;
+        }
+
+        .table {
+            text-align: center;
+        }
+
+        .table thead tr th {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                <img src="../../学生管理系统/h5css学生管理系统/img/logo.png" alt="">
+                                <span>空</span>
+                                <span>刻</span>
+                                <span>中</span>
+                                <span>间</span>
+                            </div>
+                            <form class="navbar-form">
+                                <div class="form-group">
+                                    <span>请输入关键字：</span>
+                                    <input type="text" class="input" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-danger">确定</button>
+                            </form>
+                        </div>
+
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">学生列表</a></li>
+                                <li><a href="#">添加学生</a></li>
+                                <li><a href="#">学生比例饼图</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </header>
+        <aside>
+
+        </aside>
+        <article>
+            <div class="wrap">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-10">
+                            <div class="radio">
+                                <label>
+
+                                    男<input type="radio" name="male" style="margin: 5px 10px; vertical-align: middle;">
+
+                                </label>
+                                <label style="margin:0 100px;">
+                                    女<input type="radio" name="male" style="margin: 5px 10px ">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <button type="submit" class="btn btn-default">Sign in</button>
+                            <button type="submit" class="btn btn-default">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="wrap1">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>信息</th>
+                            <th>信息</th>
+                            <th>信息</th>
+                            <th>信息</th>
+                            <th>信息</th>
+                            <th>信息</th>
+                            <th>信息</th>
+                            <th>信息</th>
+                            
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>梦淋雨</td>
+                            <td>男</td>
+                            <td>1346@qq.com</td>
+                            <td>临时</td>
+                            <td>1654651654</td>
+                            <td>5346646</td>
+                            <td>阿萨法啥事</td>
+                            <td><button class="btn btn-success">编辑</button><button class="btn btn-danger">删除</button></td>
+
+                        </tr>
+                        <tr>
+                            <td>梦淋雨</td>
+                            <td>男</td>
+                            <td>1346@qq.com</td>
+                            <td>临时</td>
+                            <td>1654651654</td>
+                            <td>5346646</td>
+                            <td>阿萨法啥事</td>
+                            <td><button class="btn btn-success">编辑</button><button class="btn btn-danger">删除</button></td>
+
+                        </tr>
+                        <tr>
+                            <td>梦淋雨</td>
+                            <td>男</td>
+                            <td>1346@qq.com</td>
+                            <td>临时</td>
+                            <td>1654651654</td>
+                            <td>5346646</td>
+                            <td>阿萨法啥事</td>
+                            <td><button class="btn btn-success">编辑</button><button class="btn btn-danger">删除</button></td>
+
+                        </tr>
+                        <tr>
+                            <td>梦淋雨</td>
+                            <td>男</td>
+                            <td>1346@qq.com</td>
+                            <td>临时</td>
+                            <td>1654651654</td>
+                            <td>5346646</td>
+                            <td>阿萨法啥事</td>
+                            <td><button class="btn btn-success">编辑</button><button class="btn btn-danger">删除</button></td>                            
+
+                        </tr>
+                        <tr>
+                            <td>梦淋雨</td>
+                            <td>男</td>
+                            <td>1346@qq.com</td>
+                            <td>临时</td>
+                            <td>1654651654</td>
+                            <td>5346646</td>
+                            <td>阿萨法啥事</td>
+                            <td><button class="btn btn-success">编辑</button><button class="btn btn-danger">删除</button></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </div>
+    <script src="../../计算机课程/计算机jq/jquery-3.3.1.js"></script>
+    <script src="../../计算机课程/bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script></script>
+</body>
+
+</html>

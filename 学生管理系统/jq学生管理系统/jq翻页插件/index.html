@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq翻页插件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrapper {
+            width: 600px;
+            height: 600px;
+            background-color: bisque;
+            border: 1px solid #000;
+            margin: 100px auto;
+        }
+
+        ul {
+            text-align: center;
+        }
+
+        li {
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid #000;
+            background-color: antiquewhite;
+            margin: 10px 5px;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <ul class="tpl">
+            <li class="prev_page">上一页</li>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li class="next_page">下一页</li>
+        </ul> -->
+    </div>
+    <script src="../../../jquery-3.3.1.js"></script>
+    <script src="./jqturnPage.js"></script>
+    <script>
+        $('.wrapper').turnPage({
+            curPage: 1,
+            allPage: 10,
+            callback: function () {
+                console.log(123)
+            }
+        })
+    </script>
+</body>
+</html>

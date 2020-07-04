@@ -1,0 +1,631 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    font-size: 15px;
+    min-width: 960px;
+}
+
+.wrapper {
+    position: relative;
+    width: 100vw;
+    min-width: 960px;
+}
+
+.wrapper header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8rem;
+    background-image: linear-gradient(to right, #333, #222, #777);
+    z-index: 10;
+    min-width: 960px;
+}
+
+.wrapper header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./img/love.png');
+    opacity: .1;
+    z-index: -1;
+    min-width: 960px;
+}
+
+.wrapper header .logo_wrap {
+    position: relative;
+    height: 100%;
+    width: 300px;
+    /* border: 1px solid #fff; */
+    margin-left: 50px;
+    transition: all .2s linear;
+}
+
+.wrapper header .logo_wrap .logo {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-image: url('./img/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper header .logo_wrap .name {
+    position: absolute;
+    right: 65px;
+    font-size: 25px;
+    color: #fff;
+    line-height: 8rem;
+    word-spacing: 7px;
+    transition: all .2s linear;
+    text-shadow: 2px 2px 3px #fff;
+}
+
+@keyframes text_jump {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-28%)
+    }
+}
+
+.wrapper header .logo_wrap .name span {
+    display: inline-block;
+}
+
+.wrapper header .logo_wrap .name .s1 {
+    animation: text_jump .7s linear infinite alternate 0s;
+}
+
+.wrapper header .logo_wrap .name .s2 {
+    animation: text_jump .7s linear infinite alternate .25s;
+}
+
+.wrapper header .logo_wrap .name .s3 {
+    animation: text_jump .7s linear infinite alternate .5s;
+}
+
+.wrapper header .logo_wrap .name .s4 {
+    animation: text_jump .7s linear infinite alternate .75s;
+}
+
+.wrapper header .search_wrap {
+    position: absolute;
+    right: 150px;
+    bottom: 30px;
+    /* border: 1px solid #fff; */
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    transition: all .2s linear;
+}
+
+.wrapper header .search_wrap .search_text {
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline-style: none;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 900;
+    border-radius: 8px;
+}
+
+.wrapper header .search_wrap .search_btn {
+    width: 55px;
+    height: 33px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    box-shadow: 2px 2px 6px #222;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #aaa;
+    transition: all .2s linear;
+}
+
+.wrapper header .search_wrap .search_btn:hover {
+    box-shadow: 4px 4px 10px 5px #222;
+    background-color: #ff0;
+    color: #555;
+}
+
+.wrapper aside {
+    position: absolute;
+    left: 0;
+    top: 8rem;
+    width: 250px;
+    height: calc(100vh - 8rem);
+    /* border: 1px solid; */
+    background-image: linear-gradient(to bottom, #333, #555, #aaa)
+}
+
+.wrapper aside::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('./img/love.png');
+    opacity: .1;
+    z-index: -1;
+}
+
+.wrapper aside dl {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.wrapper aside dl dt {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.wrapper aside dl dd {
+    width: 100%;
+    padding: 10px 0px 10px 80px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 30px 0px 0px 30px;
+    margin-left: 30px;
+    transition: all .1s ease-in;
+}
+
+.wrapper aside dl dd.active {
+    background-color: #aaa;
+}
+
+.wrapper aside dl dd.active a {
+    color: #ff0;
+}
+
+.wrapper aside dl dd a {
+    color: #fff;
+}
+
+.wrapper aside dl dd:hover a {
+    color: #ff0;
+}
+
+.wrapper aside dl dd:hover {
+    background-color: #aaa;
+}
+
+.wrapper section {
+    width: 100%;
+    height: 100vh;
+    padding: 8rem 0px 0px 250px;
+    box-sizing: border-box;
+    /* min-width: 960px; */
+}
+
+.wrapper section .pie {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.wrapper section .pie:target {
+    display: flex;
+}
+
+.wrapper section .pie .areaPie,
+.wrapper section .pie .sexPie {
+    width: 500px;
+    height: 500px;
+    border: 1px solid;
+    transition: all .2s linear;
+}
+
+.wrapper section .pie .sexPie {
+    width: 500px;
+    height: 500px;
+    border: 1px solid;
+}
+
+.wrapper header .btn {
+    position: absolute;
+    padding: 5px 10px;
+    width: 50px;
+    height: 45px;
+    border: 3px solid #ccc;
+    left: 30px;
+    top: calc(50% - 20px);
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 6px 1px #aaa;
+    cursor: pointer;
+    display: none;
+}
+
+.wrapper header .btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #aaa;
+    margin-top: 8px;
+}
+
+.wrapper header .btn span:nth-of-type(2) {
+    margin: 7px 0px;
+
+}
+
+.wrapper header .btn span:nth-of-type(1) {
+    margin: 3px 0px;
+
+}
+
+.wrapper header .btn:hover span {
+    animation: btn-change 2s linear infinite;
+}
+
+.wrapper header .btn:hover {
+    box-shadow: 1px 1px 6px 2px #ccc;
+}
+
+
+
+
+.wrapper header dl {
+    display: none;
+    margin-top: 35px;
+    width: 100%;
+    background-image: linear-gradient(to right, #555, #222, #555);
+}
+
+.wrapper header dl dd {
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all .2s linear;
+}
+
+.wrapper header dl dd a {
+    color: #fff;
+}
+
+.wrapper header dl dd:hover {
+    background-color: #aaa;
+}
+
+@keyframes btn-change {
+    0% {
+        transform: rotateZ(0deg)
+    }
+
+    25% {
+        transform: rotateZ(45deg)
+    }
+
+    50% {
+        transform: rotateZ(0deg)
+    }
+
+    75% {
+        transform: rotateZ(-45deg)
+    }
+
+    100% {
+        transform: rotateZ(0deg)
+    }
+}
+
+@media screen and (max-width: 1255px) {
+
+    .wrapper section .pie .areaPie,
+    .wrapper section .pie .sexPie {
+        transform: scale(.8);
+        border: 1px solid;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper aside {
+        display: none;
+    }
+
+    .wrapper section .pie .areaPie,
+    .wrapper section .pie .sexPie {
+        transform: scale(.9);
+        border: 1px solid;
+    }
+
+    .wrapper section {
+        padding-left: 0;
+    }
+
+    .wrapper header .search_wrap {
+        right: 60px;
+    }
+
+    .wrapper header .logo_wrap {
+        transform: scale(.6) translateX(30px);
+    }
+
+    .wrapper header .logo_wrap div.name {
+        font-size: 30px;
+        right: 55px;
+
+    }
+
+    .wrapper header .btn {
+        display: block;
+    }
+
+
+}
+
+.wrapper header .dl_wrap {
+    position: absolute;
+    left: 0;
+    top: 85px;
+    /* border: 1px solid red; */
+    width: 100%;
+    /* height: 160px; */
+}
+
+.wrapper section .student_list {
+    overflow-x: auto;
+    display: none;
+}
+
+.wrapper section .student_list:target {
+    display: block;
+}
+
+.wrapper section table {
+    min-width: 1600px;
+    width: 100%;
+}
+
+.wrapper section table thead {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper section table thead tr {
+    width: 100%;
+    display: flex;
+}
+
+.wrapper section table thead tr td {
+    border: 1px solid #000;
+    box-sizing: border-box;
+    padding: 5px;
+    flex: .9 1;
+    background-color: antiquewhite;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .4);
+    font-weight: 600;
+}
+
+.wrapper section table thead tr td:nth-of-type(n + 3) {
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    flex: 1 1;
+}
+
+.wrapper section table thead tr td:nth-of-type(8) {
+    flex: .1 1 90px;
+}
+
+.wrapper section table thead tr td:nth-of-type(2) {
+    flex: .1 1 70px;
+}
+
+.wrapper section table thead tr td:nth-of-type(6) {
+    flex: .8 1;
+}
+
+.wrapper section table thead tr td:nth-of-type(3) {
+    flex: .9 1;
+}
+
+.wrapper section table thead tr td:nth-of-type(5) {
+    flex: .5 1;
+}
+
+.wrapper section table thead tr td span {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 900;
+}
+
+.wrapper section table thead tr button {
+    width: 45%;
+    border: none;
+    outline: none;
+    background-color: rgba(203, 23, 180);
+    color: #000;
+    box-shadow: 2px 2px 6px 2px #000;
+    cursor: pointer;
+    height: 20px;
+    box-sizing: border-box;
+    transition: all .1s linear;
+}
+
+.wrapper section table thead tr button:hover {
+    color: #333;
+    box-shadow: 2px 2px 6px 4px #000;
+}
+
+.wrapper section .turn_page ul {
+    text-align: center;
+}
+
+.wrapper section .turn_page li {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    background-color: antiquewhite;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.wrapper section .turn_page li.self_active {
+    background-color: skyblue;
+}
+
+.wrapper section .add_student {
+    display: none;
+    float: left;
+    position: relative;
+    /*top: 100px;*/
+    width: 100%;
+    height: 100%;
+    font-weight: 900;
+}
+
+.wrapper section .add_student:target {
+    display: block;
+}
+
+.wrapper section .add_student .form_right {
+    /* display: none; */
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-top: 50px;
+    top: 100px;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(255, 170, 180);
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px 3px rgba(255, 170, 180, .6)
+}
+
+.wrapper section .add_student .form_right .box {
+    width: 500px;
+    height: 40px;
+}
+
+.wrapper section .add_student .form_right .box label {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+
+.wrapper section .add_student .form_right .box input {
+    width: 300px;
+    height: 20px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+}
+
+.wrapper section .add_student .form_right .box input#male,
+input#female {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+.wrapper section .add_student .form_right .box:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+.wrapper section .add_student .form_right .box .sub,
+.wrapper section .add_student .form_right .box .reset {
+    display: inline-block;
+    width: 145px;
+    height: 30px;
+    text-align: center;
+}
+
+
+.mask {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    /* right: 0;
+    bottom: 0; */
+    width: 100%;
+    height: 100%;    
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.mask .mask_form_right {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-top: 50px;
+    top: 250px;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(255, 170, 180);
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px 3px rgba(255, 170, 180, .6)
+}
+
+.mask .mask_form_right .box2 {
+    width: 500px;
+    height: 40px;
+}
+
+.mask .mask_form_right .box2 label {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+
+.mask .mask_form_right .box2 input {
+    width: 300px;
+    height: 20px;
+    margin-left: 10px;
+    outline: none;
+}
+
+.mask .mask_form_right .box2 input#mask_male,
+.mask .mask_form_right .box2 input#mask_female {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+.mask .mask_form_right .box2:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+.mask .mask_form_right .box2 .sub,
+.mask .mask_form_right .box2 .reset {
+    display: inline-block;
+    width: 145px;
+    height: 30px;
+    text-align: center;
+}

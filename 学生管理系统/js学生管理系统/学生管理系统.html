@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学生管理系统</title>
+    <link rel="stylesheet" href="学生管理系统.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header"></div>
+        <div class="content">
+            <dl>
+                <dt>管理列表</dt>
+                <dd class="active stu" data="id">学生列表</dd>
+                <dd class="add_stu" data="form_right">添加学生</dd>
+            </dl>
+            <div class="right">
+
+                <div class="form_right">
+                    <form action="" class="form">
+                        <div class="box">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        <div class="box">
+                            <label>性别</label>
+                            <label for="male" class="sex">男</label>
+                            <input type="radio" id="male" checked name="sex" value="0">
+                            <label for="female" class="sex">女</label>
+                            <input type="radio" id="female" name="sex" value="1">
+                        </div>
+                        <div class="box">
+                            <label for="ID">学号</label>
+                            <input type="text" id="ID" name="sNo">
+                        </div>
+                        <div class="box">
+                            <label for="e-mail">邮箱</label>
+                            <input type="text" id="e-mail" name="email">
+                        </div>
+                        <div class="box">
+                            <label for="birth">出生年</label>
+                            <input type="text" id="birth" name="birth">
+                        </div>
+                        <div class="box">
+                            <label for="tele">电话</label>
+                            <input type="text" id="tele" name="phone">
+                        </div>
+                        <div class="box">
+                            <label for="address">地址</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+                        <div class="box">
+                            <label></label>
+                            <input type="submit" value="提交" class="sub">
+                            <input type="reset" value="重置" class="reset">
+                        </div> 
+                    </form>
+                </div>
+
+                <div class="id block">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="mask">
+        <div class="mask_form_right ">
+            <form action="" class="mask_form">
+                <div class="box2">
+                    <label for="mask_name">姓名</label>
+                    <input type="text" id="mask_name" name="name">
+                </div>
+                <div class="box2">
+                    <label>性别</label>
+                    <label for="mask_male" class="sex">男</label>
+                    <input type="radio" id="mask_male" name="sex" value="0">
+                    <label for="mask_female" class="sex">女</label>
+                    <input type="radio" id="mask_female" name="sex" value="1">
+                </div>
+                <div class="box2">
+                    <label for="mask_ID">学号</label>
+                    <input type="text" id="mask_ID" name="sNo">
+                </div>
+                <div class="box2">
+                    <label for="mask_e-mail">邮箱</label>
+                    <input type="text" id="mask_e-mail" name="email">
+                </div>
+                <div class="box2">
+                    <label for="mask_birth">出生年</label>
+                    <input type="text" id="mask_birth" name="birth">
+                </div>
+                <div class="box2">
+                    <label for="mask_tele">电话</label>
+                    <input type="text" id="mask_tele" name="phone">
+                </div>
+                <div class="box2">
+                    <label for="mask_address">地址</label>
+                    <input type="text" id="mask_address" name="address">
+                </div>
+                <div class="box2">
+                    <label></label>
+                    <input type="submit" value="提交" class="mask_sub sub">
+                    <input type="reset" value="重置" class="reset">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="学生管理系统.js"></script>
+
+</body>
+
+</html>

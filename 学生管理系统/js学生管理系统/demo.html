@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    all:<input type="checkbox" name="" id="">
+    <h1>吃货</h1>
+    all:<input type="checkbox" name="" id="">
+    <h2>蔬菜</h2>
+    all:<input type="checkbox" name="" id="">
+    茄子<input type="checkbox" name="" id="">
+    菠菜<input type="checkbox" name="" id="">
+    香菜<input type="checkbox" name="" id="">
+    <h2>水果</h2>
+    all:<input type="checkbox" name="" id="">
+    鸭梨<input type="checkbox" name="" id="">
+    苹果<input type="checkbox" name="" id="">
+    香蕉<input type="checkbox" name="" id="">
+    <h1>明星</h1>
+    all:<input type="checkbox" name="" id="">
+    <h2>歌星</h2>
+    all:<input type="checkbox" name="" id="">
+    张杰<input type="checkbox" name="" id="">
+    林俊杰<input type="checkbox" name="" id="">
+    周杰伦<input type="checkbox" name="" id="">
+    <h2>打星</h2>
+    all:<input type="checkbox" name="" id="">
+    成龙<input type="checkbox" name="" id="">
+    李连杰<input type="checkbox" name="" id="">
+    李小龙<input type="checkbox" name="" id="">
+    <input type="button" value="af">
+    <script src="../jquery-3.3.1.js"></script>
+    <script>
+        $('h1').eq(0).next('input').click(function () {
+            if ($(this).prop('checked')) {
+                $(this).nextAll('input[type=checkbox]').prop('checked', true)
+            } else {
+                $(this).nextAll('input[type=checkbox]').prop('checked', false)
+            }
+        })
+
+        $('h1').filter(function (index, ele) {
+            return index !== 0
+        }).next('input').click(function () {
+            if ($(this).prop('checked')) {
+                $(this).nextUntil('h1', 'input[type=checkbox]').prop('checked', true)
+            } else {
+                $(this).nextUntil('h1', 'input[type=checkbox]').prop('checked', false)
+            }
+        })
+
+        $('h2').next('input').click(function () {
+            if ($(this).prop('checked')) {
+                if ($(this).nextUntil('h2', 'input[type=checkbox]').is($('h1').next('input'))) {
+                    $(this).nextUntil('h1', 'input[type=checkbox]').prop('checked', true)
+                } else {
+                    $(this).nextUntil('h2', 'input[type=checkbox]').prop('checked', true)
+                }
+            } else {
+                if ($(this).nextUntil('h2', 'input[type=checkbox]').is($('h1').next('input'))) {
+                    $(this).nextUntil('h1', 'input[type=checkbox]').prop('checked', false)
+                } else {
+                    $(this).nextUntil('h2', 'input[type=checkbox]').prop('checked', false)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

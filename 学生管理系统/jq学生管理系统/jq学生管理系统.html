@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq学生管理系统</title>
+    <link rel="stylesheet" href="jq学生管理系统.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <form class="header_wrap">
+                <label for="search">请输入关键字</label>
+                <input type="text" name="" id="search">
+                <!-- <span class="search_btn">搜索</span> -->
+                <input type="submit" value="搜索" class="search_btn">
+            </form>
+        </div>
+        <div class="content">
+            <dl>
+                <dt>管理列表</dt>
+                <dd class="active stu" data-id="id">学生列表</dd>
+                <dd class="add_stu" data-id="form_right">添加学生</dd>
+            </dl>
+            <div class="right">
+
+                <div class="form_right">
+                    <form action="" class="form">
+                        <div class="box">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        <div class="box">
+                            <label>性别</label>
+                            <label for="male" class="sex">男</label>
+                            <input type="radio" id="male" checked name="sex" value="0">
+                            <label for="female" class="sex">女</label>
+                            <input type="radio" id="female" name="sex" value="1">
+                        </div>
+                        <div class="box">
+                            <label for="ID">学号</label>
+                            <input type="text" id="ID" name="sNo">
+                        </div>
+                        <div class="box">
+                            <label for="e-mail">邮箱</label>
+                            <input type="text" id="e-mail" name="email">
+                        </div>
+                        <div class="box">
+                            <label for="birth">出生年</label>
+                            <input type="text" id="birth" name="birth">
+                        </div>
+                        <div class="box">
+                            <label for="tele">电话</label>
+                            <input type="text" id="tele" name="phone">
+                        </div>
+                        <div class="box">
+                            <label for="address">地址</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+                        <div class="box">
+                            <label></label>
+                            <input type="submit" value="提交" class="sub" id="sub">
+                            <input type="reset" value="重置" class="reset">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="id block">
+                    <!-- <div class="right_tab">
+                        <div class="box1">姓名：<span>' 梦'</span></div>
+                        <div class="box1">性别：<span>' 男 '</span></div>
+                        <div class="box1">学号：<span>' + 132465 + '</span></div>
+                        <div class="box1">邮箱：<span>' + 4654654@.com+ </span></div>
+                        <div class="box1">出生年：<span>' + 2000 '</span></div>
+                        <div class="box1">电话：<span>' + 12345679811</span></div>
+                        <div class="box1">地址：<span>' + 哈 + '</span></div>
+                        <div class="box1">
+                            <button class="edit" data-index =' + index + '>编辑</button>
+                            <button class="del"  data-index =' + index + '>删除</button>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="mask">
+        <div class="mask_form_right ">
+            <form action="" class="mask_form">
+                <div class="box2">
+                    <label for="mask_name">姓名</label>
+                    <input type="text" id="mask_name" name="name">
+                </div>
+                <div class="box2">
+                    <label>性别</label>
+                    <label for="mask_male" class="sex">男</label>
+                    <input type="radio" id="mask_male" name="sex" value="0">
+                    <label for="mask_female" class="sex">女</label>
+                    <input type="radio" id="mask_female" name="sex" value="1">
+                </div>
+                <div class="box2">
+                    <label for="mask_ID">学号</label>
+                    <input type="text" id="mask_ID" name="sNo">
+                </div>
+                <div class="box2">
+                    <label for="mask_e-mail">邮箱</label>
+                    <input type="text" id="mask_e-mail" name="email">
+                </div>
+                <div class="box2">
+                    <label for="mask_birth">出生年</label>
+                    <input type="text" id="mask_birth" name="birth">
+                </div>
+                <div class="box2">
+                    <label for="mask_tele">电话</label>
+                    <input type="text" id="mask_tele" name="phone">
+                </div>
+                <div class="box2">
+                    <label for="mask_address">地址</label>
+                    <input type="text" id="mask_address" name="address">
+                </div>
+                <div class="box2">
+                    <label></label>
+                    <input type="submit" value="提交" class="mask_sub sub">
+                    <input type="reset" value="重置" class="reset">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../../jquery-3.3.1.js"></script>
+    <script src="./jq翻页插件/jqturnPage.js"></script>
+    <script src="jq学生管理系统.js"></script>
+</body>
+
+</html>

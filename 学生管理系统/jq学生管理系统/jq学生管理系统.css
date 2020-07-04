@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 1920px;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.wrapper .header {
+    width: 1920px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+}
+
+.wrapper .header .header_wrap {
+    position: absolute;
+    left: 100px;
+    bottom: 20px;
+}
+
+.wrapper .header .header_wrap label {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.wrapper .header .header_wrap #search {
+    width: 250px;
+    height: 25px;
+    border: none;
+    margin-left: 10px;
+    padding-left: 10px;
+    background-color: rgba(188, 188, 188);
+    vertical-align: 3px;
+    outline-style: none;
+    color: rgb(97, 91, 84);
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.wrapper .header .header_wrap .search_btn {
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: bisque;
+    border: 1px solid #000;
+    background-color: dimgrey;
+    box-shadow: 1px 1px 5px #000; 
+    margin-left: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    vertical-align: 1px;
+}
+
+.wrapper .header .header_wrap .search_btn:hover {
+    box-shadow: 1px 1px 10px #000; 
+}
+
+.wrapper .content {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.wrapper .content dl {
+    position: relative;
+    left: 0;
+    top: 0;
+    float: left;
+    width: 200px;
+    height: auto;
+    min-height: 869px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.wrapper .content dl dt {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: aqua;
+}
+
+.wrapper .content dl dd:hover {
+    background-color: lightgray;
+}
+
+.wrapper .content dl dd {
+    padding-right: 40px;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    background-color: aquamarine;
+    font-size: 17px;
+    color: gray;
+}
+
+.wrapper .content .right {
+    float: left;
+    position: relative;
+    /*top: 100px;*/
+    width: calc(100% - 200px);
+    height: calc(100% - 100px);
+}
+
+.wrapper .content .right .form_right {
+    display: none;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 100px;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(230, 230, 230);
+}
+
+.wrapper .content .right .form_right .box {
+    width: 500px;
+    height: 40px;
+}
+
+.wrapper .content .right .form_right .box label {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+
+.wrapper .content .right .form_right .box input {
+    width: 300px;
+    height: 20px;
+    margin-left: 10px;
+    outline: none;
+}
+
+.wrapper .content .right .form_right .box input#male,
+input#female {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+.wrapper .content .right .form_right .box:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+.wrapper .content .right .form_right .box .sub,
+.wrapper .content .right .form_right .box .reset {
+    display: inline-block;
+    width: 145px;
+    height: 30px;
+    text-align: center;
+}
+
+.wrapper .content .right .id .right_tab {
+    width: 100%;
+    height: 22px;
+}
+
+.wrapper .content .right .id {
+    /* display: none; */
+    width: 100%;
+}
+
+.wrapper .content .right .right_tab .box1 {
+    float: left;
+    padding-left: 5px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    font-weight: bold;
+    color: red;
+}
+
+.wrapper .content .right .right_tab .box1 span {
+    text-align: center;
+    font-weight: normal;
+    color: #000;
+}
+
+.wrapper .content .right .right_tab .box1:nth-of-type(2) {
+    width: 100px;
+}
+
+.wrapper .content .right .right_tab .box1:nth-of-type(1) {
+    width: 190px;
+}
+
+.wrapper .content .right .right_tab .box1:nth-of-type(3) {
+    width: 200px;
+}
+
+.wrapper .content .right .right_tab .box1:nth-of-type(4) {
+    width: 300px;
+}
+
+.wrapper .content .right .right_tab .box1:nth-of-type(5) {
+    width: 150px;
+}
+
+.wrapper .content .right .right_tab .box1:nth-of-type(6) {
+    width: 200px;
+}
+
+.wrapper .content .right .right_tab .box1:nth-of-type(7) {
+    width: 350px;
+}
+
+.wrapper .content .right .right_tab .box1:nth-of-type(8) {
+    padding-left: 0;
+    width: 182px;
+    text-align: center;
+}
+
+.wrapper .content .right .right_tab .box1 button {
+    display: inline-block;
+    border: none;
+    width: 88px;
+    outline: none;
+    cursor: pointer;
+}
+
+.wrapper .content .right .right_tab .box1 button:hover {
+    background-color: lightgray;
+}
+
+
+.mask {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 969px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.mask .mask_form_right {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 200px;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(230, 230, 230);
+}
+
+.mask .mask_form_right .box2 {
+    width: 500px;
+    height: 40px;
+}
+
+.mask .mask_form_right .box2 label {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+
+.mask .mask_form_right .box2 input {
+    width: 300px;
+    height: 20px;
+    margin-left: 10px;
+    outline: none;
+}
+
+.mask .mask_form_right .box2 input#mask_male,
+.mask .mask_form_right .box2 input#mask_female {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+.mask .mask_form_right .box2:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+.mask .mask_form_right .box2 .sub,
+.mask .mask_form_right .box2 .reset {
+    display: inline-block;
+    width: 145px;
+    height: 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper .content dl dd.active {
+    background-color: blue;
+}
+
+/* .wrapper .content .right div.block {
+    display: block;
+} */
+
+
+
+
+
+
+
+.id ul {
+    text-align: center;
+}
+
+.id ul li {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    background-color: antiquewhite;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.id li.self_active {
+    background-color: skyblue;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>h5css3学生管理系统</title>
+    <link rel="stylesheet" href="./h5css3学生管理系统.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo_wrap">
+                <div class="logo"></div>
+                <div class="name">
+                    <span class="s1">空</span>
+                    <span class="s2">课</span>
+                    <span class="s3">中</span>
+                    <span class="s4">间</span>
+                </div>
+            </div>
+            <div class="search_wrap">
+                <form>
+                    <span>请输入关键字：</span>
+                    <input type="text" class="search_text">
+                    <input type="submit" value="搜索" class="search_btn">
+                </form>
+            </div>
+            <div class="btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="dl_wrap">
+                <dl>
+                    <dd class="active" data-hash="student_list">
+                        <a href="#student_list">学生列表</a>
+                    </dd>
+                    <dd data-hash="add_student">
+                        <a href="#add_student">添加学生</a>
+                    </dd>
+                    <dd data-hash="pie">
+                        <a href="#pie">学生饼图比例</a>
+                    </dd>
+                </dl>
+            </div>
+        </header>
+        <aside>
+            <dl>
+                <dt>管理列表</dt>
+                <dd class="active" data-hash="student_list">
+                    <a href="#student_list">学生列表</a>
+                </dd>
+                <dd data-hash="add_student">
+                    <a href="#add_student">添加学生</a>
+                </dd>
+                <dd data-hash="pie">
+                    <a href="#pie">学生饼图比例</a>
+                </dd>
+            </dl>
+        </aside>
+        <section>
+            <div class="student_list" id="student_list">
+                <table>
+                    <thead>
+                        <!-- ' <tr>\
+                            <td class="box1">姓名：<span>' + ele.name + '</span></td>\
+                            <td class="box1">性别：<span>' + (ele.sex ? "女" : "男") + '</span></td>\
+                            <td class="box1">学号：<span>' + ele.sNo + '</span></td>\
+                            <td class="box1">邮箱：<span>' + ele.email + '</span></td>\
+                            <td class="box1">出生年：<span>' + ele.birth + '</span></td>\
+                            <td class="box1">电话：<span>' + ele.phone + '</span></td>\
+                            <td class="box1">地址：<span>' + ele.address + '</span></td>\
+                            <td class="box1">\
+                                <button class="edit" data-index=' + index + '>编辑</button>\
+                                <button class="del" data-index=' + index + '>删除</button>\
+                            </td>\
+                        </tr>' -->
+                    </thead>
+                </table>
+                <div class="turn_page"></div>
+            </div>
+            <div class="add_student" id="add_student">
+                <div class="form_right">
+                    <form action="" class="form">
+                        <div class="box">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        <div class="box">
+                            <label>性别</label>
+                            <label for="male" class="sex">男</label>
+                            <input type="radio" id="male" checked name="sex" value="0">
+                            <label for="female" class="sex">女</label>
+                            <input type="radio" id="female" name="sex" value="1">
+                        </div>
+                        <div class="box">
+                            <label for="ID">学号</label>
+                            <input type="text" id="ID" name="sNo">
+                        </div>
+                        <div class="box">
+                            <label for="e-mail">邮箱</label>
+                            <input type="text" id="e-mail" name="email">
+                        </div>
+                        <div class="box">
+                            <label for="birth">出生年</label>
+                            <input type="text" id="birth" name="birth">
+                        </div>
+                        <div class="box">
+                            <label for="tele">电话</label>
+                            <input type="text" id="tele" name="phone">
+                        </div>
+                        <div class="box">
+                            <label for="address">地址</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+                        <div class="box">
+                            <label></label>
+                            <input type="submit" value="提交" class="sub" id="sub">
+                            <input type="reset" value="重置" class="reset">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="pie" id="pie">
+                <div class="areaPie" id="a"></div>
+                <div class="sexPie"></div>
+            </div>
+        </section>
+    </div>
+
+    <div class="mask">
+        <div class="mask_form_right ">
+            <form action="" class="mask_form">
+                <div class="box2">
+                    <label for="mask_name">姓名</label>
+                    <input type="text" id="mask_name" name="name">
+                </div>
+                <div class="box2">
+                    <label>性别</label>
+                    <label for="mask_male" class="sex">男</label>
+                    <input type="radio" id="mask_male" name="sex" value="0">
+                    <label for="mask_female" class="sex">女</label>
+                    <input type="radio" id="mask_female" name="sex" value="1">
+                </div>
+                <div class="box2">
+                    <label for="mask_ID">学号</label>
+                    <input type="text" id="mask_ID" name="sNo">
+                </div>
+                <div class="box2">
+                    <label for="mask_e-mail">邮箱</label>
+                    <input type="text" id="mask_e-mail" name="email">
+                </div>
+                <div class="box2">
+                    <label for="mask_birth">出生年</label>
+                    <input type="text" id="mask_birth" name="birth">
+                </div>
+                <div class="box2">
+                    <label for="mask_tele">电话</label>
+                    <input type="text" id="mask_tele" name="phone">
+                </div>
+                <div class="box2">
+                    <label for="mask_address">地址</label>
+                    <input type="text" id="mask_address" name="address">
+                </div>
+                <div class="box2">
+                    <label></label>
+                    <input type="submit" value="提交" class="mask_sub sub">
+                    <input type="reset" value="重置" class="reset">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script src="../../jquery-3.3.1.js"></script>
+    <script src="../jq学生管理系统/jq翻页插件/jqturnPage.js"></script>
+    <script src="../echarts.js"></script>
+    <script src="./js/pie.js"></script>
+    <script src="./js/btn.js"></script>
+    <script src="./js/render.js"></script>
+    <script src="./js/h5css3学生管理系统.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>
